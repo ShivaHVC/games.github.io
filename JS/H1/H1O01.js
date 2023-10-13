@@ -9,7 +9,7 @@ function draw() {
   // groene cirkel zonder rand
   
  strokeWeight(40);
- stroke('green')
+ stroke('black')
   fill('white');
   ellipse(225,225,350);
   
