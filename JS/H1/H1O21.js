@@ -21,7 +21,7 @@ function draw() {
   strokeWeight(10);
 
   if (mouseIsPressed == true && snelheid == 5) {
-      fill('green');
+      fill('purple');
   }
   else {
     fill('dodgerblue');
