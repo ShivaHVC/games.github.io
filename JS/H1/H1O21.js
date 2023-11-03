@@ -20,7 +20,7 @@ function draw() {
   stroke('white');
   strokeWeight(10);
 
-  if (mouseIsPressed == true && snelheid == 5) {
+  if (mouseIsPressed == true && snelheid < 5) {
       fill('purple');
   }
   else {
