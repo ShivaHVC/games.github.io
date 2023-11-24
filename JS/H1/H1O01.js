@@ -5,7 +5,7 @@ function setup() {
   noLoop();
 }
 
-function draw() {
+function  draw() {
   // groene cirkel zonder rand
   
  strokeWeight(40);
