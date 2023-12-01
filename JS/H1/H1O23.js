@@ -1,7 +1,7 @@
-var x = 50;
-var y = 50;
-var xJager = 800;
-var yJager = 175;
+var xJager = 50;
+var yJager = 50;
+var xProoi = 800;
+var yProoi = 175;
 
 function setup() {
   canvas = createCanvas(1000, 400);
@@ -14,31 +14,31 @@ function setup() {
 
 function draw() {
   background('olive');
-  
+
   if (keyIsDown(UP_ARROW)) {
-    y -= 5;
+    yJager -= 5;
   }
   if (keyIsDown(DOWN_ARROW)) {
-    y += 5;
+    yJager += 5;
   }
   if (keyIsDown(LEFT_ARROW)) {
-    x -= 5;
+    xJager -= 5;
   }
   if (keyIsDown(RIGHT_ARROW)) {
-    x += 5;
+    xJager += 5;
   }
 
-  y = constrain(y, 0, height - 100);
-  x = constrain(x, 0, width - 100);
+  yJager = constrain(yJager, 0, height - 100);
+  xJager = constrain(xJager, 0, width - 100);
 
-  if (x >= 700 && x <= 875 && y >= 75 && y <= 225) {
-    fill('chartreuse');
+  // Controleer of de jager de prooi raakt en verander kleur
+  if (xJager + 100 >= xProoi && xJager <= xProoi + 50 && yJager + 100 >= yProoi && yJager <= yProoi + 50) {
+    fill('chartreuse'); // Jager raakt de prooi
   } else {
-    fill('darkkhaki');
+    fill('darkkhaki'); // Jager raakt de prooi niet
   }
-  
-  rect(800, 175, 75, 50);
-  
+
+  rect(xProoi, yProoi, 50, 50); // Teken de prooi
   fill('moccasin');
-  rect(xJager, yJager, 100, 100);   
+  rect(xJager, yJager, 100, 100); // Teken de jager
 }
